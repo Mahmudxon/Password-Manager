@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.mahmudxon.passwordmanager.ui.main.view.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="uz.mahmudxon.passwordmanager.ui.auth.AuthFragment"
+        android:label="SignUpFragment">
+
+        <action
+            android:id="@+id/action_signUpFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/lockAppFragment"
+        android:name="uz.mahmudxon.passwordmanager.ui.lock.LockAppFragment"
+        android:label="fragment_lock_app"
+        tools:layout="@layout/fragment_lock_app">
+
+        <action
+            android:id="@+id/action_lockAppFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="uz.mahmudxon.passwordmanager.ui.add.view.AddFragment"
+        android:label="AddFragment" />
+
+</navigation>
